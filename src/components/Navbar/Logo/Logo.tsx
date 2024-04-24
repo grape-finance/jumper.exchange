@@ -5,7 +5,7 @@ type LogoProps = {
 };
 
 export const Logo = ({ variant }: LogoProps) => {
-  const logo = variant === 'default' ? <JumperLogo /> :  <JumperLogo />;
+  const logo = variant === 'default' ? <JumperLogo /> : <JumperLogo />;
 
   return logo;
 };
