@@ -122,49 +122,49 @@ export const useMainMenuContent = () => {
       showMoreIcon: true,
       triggerSubMenu: MenuKeysEnum.Language,
     },
-    {
-      label: t('navbar.navbarMenu.developers'),
-      prefixIcon: <DeveloperModeIcon />,
-      triggerSubMenu: MenuKeysEnum.Devs,
-    },
-    {
-      label: t('navbar.navbarMenu.profile'),
-      prefixIcon: <AccountCircleIcon />,
-      showMoreIcon: false,
-      onClick: () => {
-        trackEvent({
-          category: TrackingCategory.Menu,
-          label: 'click-jumper-pass-link',
-          action: TrackingAction.ClickJumperProfileLink,
-          data: { [TrackingEventParameter.Menu]: 'pass' },
-          disableTrackingTool: [
-            EventTrackingTool.ARCx,
-            EventTrackingTool.Cookie3,
-          ],
-        });
-        closeAllMenus();
-        router.push(JUMPER_LOYALTY_PATH);
-      },
-    },
-    {
-      label: 'Jumper Learn',
-      prefixIcon: <SchoolIcon />,
-      showMoreIcon: false,
-      onClick: () => {
-        trackEvent({
-          category: TrackingCategory.Menu,
-          label: 'click-jumper-learn-link',
-          action: TrackingAction.ClickJumperLearnLink,
-          data: { [TrackingEventParameter.Menu]: 'jumper_learn' },
-          disableTrackingTool: [
-            EventTrackingTool.ARCx,
-            EventTrackingTool.Cookie3,
-          ],
-        });
-        closeAllMenus();
-        router.push(JUMPER_LEARN_PATH);
-      },
-    },
+    // {
+    //   label: t('navbar.navbarMenu.developers'),
+    //   prefixIcon: <DeveloperModeIcon />,
+    //   triggerSubMenu: MenuKeysEnum.Devs,
+    // },
+    // {
+    //   label: t('navbar.navbarMenu.profile'),
+    //   prefixIcon: <AccountCircleIcon />,
+    //   showMoreIcon: false,
+    //   onClick: () => {
+    //     trackEvent({
+    //       category: TrackingCategory.Menu,
+    //       label: 'click-jumper-pass-link',
+    //       action: TrackingAction.ClickJumperProfileLink,
+    //       data: { [TrackingEventParameter.Menu]: 'pass' },
+    //       disableTrackingTool: [
+    //         EventTrackingTool.ARCx,
+    //         EventTrackingTool.Cookie3,
+    //       ],
+    //     });
+    //     closeAllMenus();
+    //     router.push(JUMPER_LOYALTY_PATH);
+    //   },
+    // },
+    // {
+    //   label: 'Jumper Learn',
+    //   prefixIcon: <SchoolIcon />,
+    //   showMoreIcon: false,
+    //   onClick: () => {
+    //     trackEvent({
+    //       category: TrackingCategory.Menu,
+    //       label: 'click-jumper-learn-link',
+    //       action: TrackingAction.ClickJumperLearnLink,
+    //       data: { [TrackingEventParameter.Menu]: 'jumper_learn' },
+    //       disableTrackingTool: [
+    //         EventTrackingTool.ARCx,
+    //         EventTrackingTool.Cookie3,
+    //       ],
+    //     });
+    //     closeAllMenus();
+    //     router.push(JUMPER_LEARN_PATH);
+    //   },
+    // },
     {
       label: t('navbar.navbarMenu.lifiExplorer'),
       prefixIcon: <SearchOutlinedIcon />,
@@ -190,89 +190,89 @@ export const useMainMenuContent = () => {
         openInNewTab(explorerUrl);
       },
     },
-    {
-      label: 'X',
-      prefixIcon: <XIcon />,
-      showMoreIcon: false,
-      onClick: () => {
-        trackEvent({
-          category: TrackingCategory.Menu,
-          label: 'click-x-link',
-          action: TrackingAction.ClickXLink,
-          data: { [TrackingEventParameter.Menu]: 'lifi_x' },
-          disableTrackingTool: [
-            EventTrackingTool.ARCx,
-            EventTrackingTool.Cookie3,
-          ],
-        });
-        trackPageload({
-          source: TrackingCategory.MainMenu,
-          destination: 'x-jumper',
-          url: X_URL,
-          pageload: true,
-          disableTrackingTool: [EventTrackingTool.Cookie3],
-        });
-        openInNewTab(X_URL);
-      },
-    },
-    {
-      label: 'Discord',
-      prefixIcon: (
-        <Discord
-          color={
-            theme.palette.mode === 'dark'
-              ? theme.palette.white.main
-              : theme.palette.black.main
-          }
-        />
-      ),
-      showMoreIcon: false,
-      onClick: () => {
-        trackEvent({
-          category: TrackingCategory.Menu,
-          label: 'click-discord-link',
-          action: TrackingAction.ClickDiscordLink,
-          data: { [TrackingEventParameter.Menu]: 'lifi_discord' },
-          disableTrackingTool: [
-            EventTrackingTool.ARCx,
-            EventTrackingTool.Cookie3,
-          ],
-        });
-        trackPageload({
-          source: TrackingCategory.Menu,
-          destination: 'discord-lifi',
-          url: DISCORD_URL,
-          pageload: true,
-          disableTrackingTool: [EventTrackingTool.Cookie3],
-        });
-        openInNewTab(DISCORD_URL);
-      },
-    },
-    {
-      label: t('navbar.navbarMenu.support'),
-      prefixIcon: (
-        <Discord
-          color={
-            theme.palette.mode === 'light'
-              ? theme.palette.primary.main
-              : theme.palette.white.main
-          }
-        />
-      ),
-      onClick: () => {
-        trackEvent({
-          category: TrackingCategory.Menu,
-          label: 'open-support-modal',
-          action: TrackingAction.OpenMenu,
-          data: { [TrackingEventParameter.Menu]: 'support_modal' },
-          disableTrackingTool: [
-            EventTrackingTool.ARCx,
-            EventTrackingTool.Cookie3,
-          ],
-        });
-        setSupportModalState(true);
-      },
-      showButton: true,
-    },
+    // {
+    //   label: 'X',
+    //   prefixIcon: <XIcon />,
+    //   showMoreIcon: false,
+    //   onClick: () => {
+    //     trackEvent({
+    //       category: TrackingCategory.Menu,
+    //       label: 'click-x-link',
+    //       action: TrackingAction.ClickXLink,
+    //       data: { [TrackingEventParameter.Menu]: 'lifi_x' },
+    //       disableTrackingTool: [
+    //         EventTrackingTool.ARCx,
+    //         EventTrackingTool.Cookie3,
+    //       ],
+    //     });
+    //     trackPageload({
+    //       source: TrackingCategory.MainMenu,
+    //       destination: 'x-jumper',
+    //       url: X_URL,
+    //       pageload: true,
+    //       disableTrackingTool: [EventTrackingTool.Cookie3],
+    //     });
+    //     openInNewTab(X_URL);
+    //   },
+    // },
+    // {
+    //   label: 'Discord',
+    //   prefixIcon: (
+    //     <Discord
+    //       color={
+    //         theme.palette.mode === 'dark'
+    //           ? theme.palette.white.main
+    //           : theme.palette.black.main
+    //       }
+    //     />
+    //   ),
+    //   showMoreIcon: false,
+    //   onClick: () => {
+    //     trackEvent({
+    //       category: TrackingCategory.Menu,
+    //       label: 'click-discord-link',
+    //       action: TrackingAction.ClickDiscordLink,
+    //       data: { [TrackingEventParameter.Menu]: 'lifi_discord' },
+    //       disableTrackingTool: [
+    //         EventTrackingTool.ARCx,
+    //         EventTrackingTool.Cookie3,
+    //       ],
+    //     });
+    //     trackPageload({
+    //       source: TrackingCategory.Menu,
+    //       destination: 'discord-lifi',
+    //       url: DISCORD_URL,
+    //       pageload: true,
+    //       disableTrackingTool: [EventTrackingTool.Cookie3],
+    //     });
+    //     openInNewTab(DISCORD_URL);
+    //   },
+    // },
+    // {
+    //   label: t('navbar.navbarMenu.support'),
+    //   prefixIcon: (
+    //     <Discord
+    //       color={
+    //         theme.palette.mode === 'light'
+    //           ? theme.palette.primary.main
+    //           : theme.palette.white.main
+    //       }
+    //     />
+    //   ),
+    //   onClick: () => {
+    //     trackEvent({
+    //       category: TrackingCategory.Menu,
+    //       label: 'open-support-modal',
+    //       action: TrackingAction.OpenMenu,
+    //       data: { [TrackingEventParameter.Menu]: 'support_modal' },
+    //       disableTrackingTool: [
+    //         EventTrackingTool.ARCx,
+    //         EventTrackingTool.Cookie3,
+    //       ],
+    //     });
+    //     setSupportModalState(true);
+    //   },
+    //   showButton: true,
+    // },
   ];
 };

@@ -18,9 +18,9 @@ export const Layout: React.FC<PropsWithChildren<LayoutProps>> = ({
       <BackgroundGradient />
       <Navbar />
       {children}
-      <SupportModal />
-      <Snackbar />
-      <PoweredBy fixedPosition={fixedPoweredBy} />
+      {/* <SupportModal /> */}
+      {/* <Snackbar /> */}
+      {/* <PoweredBy fixedPosition={fixedPoweredBy} /> */}
     </>
   );
 };

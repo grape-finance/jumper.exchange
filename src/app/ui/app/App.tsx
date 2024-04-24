@@ -24,7 +24,7 @@ const App = ({
         closedWelcomeScreen={welcomeScreenClosedCookie}
       />
       <FeatureCards />
-      <Snackbar />
+      {/* <Snackbar /> */}
     </>
   );
 };
