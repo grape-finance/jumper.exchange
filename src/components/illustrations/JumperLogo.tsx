@@ -1,6 +1,5 @@
 import { useTheme } from '@mui/material';
 
-
 // brand-logo: "jumper" + jumper-icon
 export const JumperLogo = () => {
   const theme = useTheme();
@@ -12,11 +11,7 @@ export const JumperLogo = () => {
 
   return (
     <>
-      <img
-        src='/assets/logo.png'
-        alt="logo"
-        height={70}
-      />
+      <img src="/assets/logo.png" alt="logo" height={70} />
     </>
   );
 };

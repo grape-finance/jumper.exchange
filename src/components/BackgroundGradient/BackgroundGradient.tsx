@@ -15,8 +15,8 @@ export const BackgroundGradient = ({ styles }: BackgroundGradientProps) => {
   return (
     <BackgroundGradientContainer sx={styles}>
       <img
-        src='/assets/bg.jpg'
-        style={{width:'100%', height:'100%'}}
+        src="/assets/bg.jpg"
+        style={{ width: '100%', height: '100%' }}
         alt="logo"
       />
     </BackgroundGradientContainer>
